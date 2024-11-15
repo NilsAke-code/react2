@@ -11,6 +11,7 @@ import Imagestext from './Components/Imagestext'
 import Iphones from './Components/Iphones'
 import Subscription from './Components/Subscription'
 import Sectiontestimonials from './Components/Sectiontestimonials'
+import Hero2 from './Components/hero2'
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Faq />
         <Buttoncontact />
         <Subscription />
+        <Hero2 />
       </main>
       <Footer />
     </div>
