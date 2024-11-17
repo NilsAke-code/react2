@@ -14,4 +14,4 @@ const StarRating = ({ rating }) => {
   )
 }
 
-export default StarRating;
+export default StarRating

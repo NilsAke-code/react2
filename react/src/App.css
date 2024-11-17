@@ -350,6 +350,9 @@ a:hover {
   font-size: 1rem;
   color: var(--color-gray800);
 }
+.dark header .navbar .nav-link {
+  color: var(--color-white);
+}
 .nav-link:hover {
   color: var(--color-primary);
   text-decoration: underline;
@@ -1281,7 +1284,7 @@ footer .container {
   }
  
 }
-.input-group {
+.input-button {
   display: flex;
 
   .form-input {
@@ -1308,10 +1311,11 @@ footer .container {
   color: var(--color-gray900);
 }
 
-.input-group {
+.input-button {
   position: relative;
+  z-index: 10;
 }
-.input-group i {
+.input-button i {
   position: absolute;
   top: 50%;
   left: 1rem;
@@ -1343,6 +1347,32 @@ footer .container {
   font-weight: 1000;
 }
 
+.input-errors {
+  display: block;
+}
+
+.feedback-message {
+  color: var(--color-error);
+  font-size: .8rem;
+}
+
+.feedback-message.success {
+  background-color:var(--color-success);
+  color:var(--color-gray200);
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+
+}
+
+.feedback-message.error {
+  position: absolute;
+  color: var(--color-error);
+  margin-left: 50.4rem;
+  margin-top: 4.5rem;
+}
+
 
 
 @media (min-width: 1400px) {
@@ -1362,7 +1392,7 @@ footer .container {
     margin-left: 5em;
   }
 
-  .input-group {
+  .input-button {
     margin-right: 6em;
     .form-input {
       width: 330px;
@@ -1414,6 +1444,15 @@ footer .container {
   margin-top: 3rem;
   padding: 2rem;
 }
+.hero2-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: -2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
 
 .page .container {
   display: grid;
@@ -1422,7 +1461,7 @@ footer .container {
   align-items: start;
   padding-top: 2rem;
 }
-
+/* LEFTSIDE*/
 .leftside h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -1435,7 +1474,7 @@ footer .container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--color-gray600);
 }
 
@@ -1473,7 +1512,9 @@ color: var(--color-primary);
   font-size: 24px;
   font-weight: 800;
 }
-
+.dark .box-content1 p {
+  color: var(--color-gray600);
+}
 .box-content1 p {
   font-size: 1rem;
   color: var(--color-text-body);
@@ -1495,7 +1536,7 @@ color: var(--color-primary);
   margin-left: 4.5rem;
 }
 
-/* Rightside - Contact Form */
+/* Rightside contact form */
 .rightside {
   background-color: var(--color-white);
   padding-left: 6rem;
@@ -1507,6 +1548,9 @@ color: var(--color-primary);
   margin-top: 3.5rem;
   margin-left: 7rem;
 }
+.dark .rightside {
+  background-color: var(--color-gray300);
+}
 
 .rightside .headline h1 {
   font-size: 2rem;
@@ -1514,9 +1558,12 @@ color: var(--color-primary);
   padding-bottom: 2rem;
   color: var(--color-text-heading);
 }
+.dark .rightside .body p {
+  color: var(--color-gray400);
+}
 
 .rightside .body p {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-gray900);
   margin-bottom: 0.5rem;
@@ -1558,13 +1605,6 @@ color: var(--color-primary);
   width: 100%;
 }
 
-.hero2-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 .nav-contact {
   position: absolute;
   font-size: 1rem;
@@ -1574,6 +1614,9 @@ color: var(--color-primary);
   left: 50%; 
   transform: translateX(-50%);
   margin-left: -23rem;
+}
+.dark .hero2-header .nav-contact {
+  color: var(--color-white);
 }
 
 .input-error {
@@ -1595,7 +1638,7 @@ color: var(--color-primary);
   border: 1px solid var(--color-gray300);
   border-radius: 8px;
   background-color: var(--color-white);
-  color: var(--color-gray700);
+  color: var(--color-gray500);
   appearance: none;
   padding-right: 2rem;
 }
@@ -1603,7 +1646,9 @@ color: var(--color-primary);
 .input-container select::-ms-expand {
   display: none;
 }
-
+.dark .input-container, option {
+  color: var(--color-gray400);
+}
 .input-container::after {
   content: '';
   position: absolute;
@@ -1616,13 +1661,25 @@ color: var(--color-primary);
   transform: translateY(-50%) rotate(45deg);
   pointer-events: none;
 }
-.form-input {
+.form-inputsecond {
   margin-bottom: 0.8rem;
 }
-
+.dark .form-inputsecond option {
+  color: var(--color-gray400);
+}
+.dark .form-inputsecond {
+  background-color: var(--background-color);
+  color: var(--color-gray500);
+}
+.dark .body, input::placeholder {
+  color: var(--color-gray500);
+}
+.form-inputsecond option {
+  color: var(--color-gray900);
+}
 .success-message {
     background-color: #d4edda; 
-    color: #155724;      
+    color: var(--color-success);     
     border: 1px solid #c3e6cb;
     border-radius: 8px;
     padding: 1rem;
@@ -1632,6 +1689,14 @@ color: var(--color-primary);
     text-align: center;
   
 }
+.dark .rightside .body .success-message {
+  color: var(--color-success);
+  background-color: #d4edda; 
+}
+
+/*HERO2 END*/
+
+/*NAVIGATIONCONTACT */
 .Navigationcontact {
   .container {
     display: grid;
@@ -1669,6 +1734,12 @@ color: var(--color-primary);
   padding: 10px;
   font-weight: 800;
   color: black;
+}
+.dark .days {
+  color: var(--color-gray400);
+}
+.dark .days1 {
+  color: var(--color-gray400);
 }
 
 .days1 {

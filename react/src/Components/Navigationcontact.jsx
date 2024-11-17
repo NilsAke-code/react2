@@ -50,7 +50,7 @@ const Navigationcontact = () => {
               </div>
               
                 <p className="flexcolumn">
-                  <img className="timericonic"Name src={timericonic} alt="" />
+                  <img className="timericonic" src={timericonic} alt="" />
                   <span className="days">Mon - Fri:</span><span className="secondrow1"> 9:00 am - 22:00 am<br/></span>
                   <span className="days1">Sat - Sun:</span><span className="secondrow"> 9:00 am - 20:00 am</span>
                 </p>

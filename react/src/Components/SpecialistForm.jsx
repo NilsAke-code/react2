@@ -74,7 +74,7 @@ const SpecialistForm = () => {
               placeholder="Full Name"
               value={formData.fullName}
               onChange={handleChange}
-              className={`form-input ${errors.fullName ? 'input-error' : ''}`}
+              className={`form-inputsecond ${errors.fullName ? 'input-error' : ''}`}
             />
             {errors.fullName && <span className="error-text">{errors.fullName}</span>}
 
@@ -85,7 +85,7 @@ const SpecialistForm = () => {
               placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
-              className={`form-input ${errors.email ? 'input-error' : ''}`}
+              className={`form-inputsecond ${errors.email ? 'input-error' : ''}`}
             />
             {errors.email && <span className="error-text">{errors.email}</span>}
             <p>Specialist</p>
@@ -94,7 +94,7 @@ const SpecialistForm = () => {
                 name="specialist"
                 value={formData.specialist}
                 onChange={handleChange}
-                className={`form-input ${errors.specialist ? 'input-error' : ''}`}
+                className={`form-inputsecond ${errors.specialist ? 'input-error' : ''}`}
               >
                 <option value="">Select a specialist</option>
                 {specialists.map((specialist, index) => (
@@ -116,4 +116,4 @@ const SpecialistForm = () => {
 
 
 
-export default SpecialistForm;
+export default SpecialistForm
