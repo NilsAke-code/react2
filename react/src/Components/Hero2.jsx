@@ -2,16 +2,23 @@ import React from 'react'
 import Emailusicon from '../assets/Emailusicon.svg'
 import Careersicon from '../assets/Careersicon.svg'
 import Header from './Header'
+import SpecialistForm from './SpecialistForm'
+
+
 const Hero2 = () => {
   return (
     <div className="hero2">
-      <Header />
+            <div className="hero2-header">
+              <Header />
+              <a className="nav-contact" href="">Contact</a>
+            </div>
+
       <div className="page">
         <div className="container">
           <div className="leftside">
               <nav className="nav-options">
                   <i className="fa-solid fa-house"></i>
-                  <a className="Homepage-link" href="#">Homepage
+                  <a className="Homepage-link1" href="#">Homepage
                   </a>
                   <i className="fa-solid fa-angles-right"></i>
                   <a className="Homepage-link" href="#">Contact
@@ -43,31 +50,8 @@ const Hero2 = () => {
                   </div>
               </div>
           </div>
+          <SpecialistForm />
 
-          <div className="rightside">
-
-              <form  noValidate> 
-                  <div className="headline">
-                      <h1>Get Online Consultation </h1>
-                  </div>
-                  <div className="body">
-                      <p>Full name</p>
-                      <input type="text" name="full name" placeholder=""/>
-                      <p>Email adress</p>
-                      <input type="email adress" name="email adress" placeholder=""/>
-                      <p>Specialist</p>
-
-                      <div className="input-container">
-                        <input type="text" name="specialist" placeholder=""/>
-                        <i className="fa-solid fa-angle-down"></i>
-                      </div>
-                      
-                      <button type="make an appointment">Make an appointment</button>
-                  </div>
-              </form>
-
-
-          </div>
         </div>
       </div>
     </div>

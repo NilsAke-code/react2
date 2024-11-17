@@ -12,6 +12,7 @@ import Iphones from './Components/Iphones'
 import Subscription from './Components/Subscription'
 import Sectiontestimonials from './Components/Sectiontestimonials'
 import Hero2 from './Components/hero2'
+import Navigationcontact from './Components/navigationcontact'
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Buttoncontact />
         <Subscription />
         <Hero2 />
+        <Navigationcontact />
       </main>
       <Footer />
     </div>

@@ -347,6 +347,8 @@ a:hover {
   transition: color 0.3s ease;
   font-weight: 600;
   text-decoration: none;
+  font-size: 1rem;
+  color: var(--color-gray800);
 }
 .nav-link:hover {
   color: var(--color-primary);
@@ -1407,48 +1409,6 @@ footer .container {
 
 /*HERO2 START*/
 
-/* .page {
-
-  display: grid;
-  grid-template-rows: auto 1fr;
-
-  .container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 2rem;
-    grid-template-areas: "leftside rightside";
-    padding-top: 4rem;
-  }  
-  background-color: var(--color-gray100);
-
-   
-  .leftside {
-    grid-area: leftside;
-  }
-
-  .rightside {
-    grid-area: rightside;
-  }
-
-}
-.hero2 {
-  background-color: var(--color-gray100);
-  margin-top: 3rem;
-
-  .nav-options {
-    color: orange;
-  }
-
-}
- 
-.nav-options {
-    gap: 1rem;
-} */
-
-
-
-
 .hero2 {
   background-color: var(--color-gray100);
   margin-top: 3rem;
@@ -1462,14 +1422,6 @@ footer .container {
   align-items: start;
   padding-top: 2rem;
 }
-
-/* Leftside - Contact Info Section */
-/* .leftside {
-  padding: 2rem;
-  background-color: var(--color-bg);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
 
 .leftside h1 {
   font-size: 2rem;
@@ -1487,12 +1439,15 @@ footer .container {
   color: var(--color-gray600);
 }
 
-.nav-options a {
-  color: var(--color-primary);
+.Homepage-link1 {
+  color: var(--color-gray600);
 }
 
+.Homepage-link {
+color: var(--color-primary);
+}
 .contact-boxes2 {
-  margin-top: 2rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
 }
@@ -1515,16 +1470,19 @@ footer .container {
 }
 
 .box-content1 h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .box-content1 p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-text-body);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   margin-left: 4.5rem;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 300px;
 }
 
 .box-content1 a {
@@ -1540,26 +1498,27 @@ footer .container {
 /* Rightside - Contact Form */
 .rightside {
   background-color: var(--color-white);
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
   padding-top: 3rem;
   padding-bottom: 5rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 3.5rem;
+  margin-left: 7rem;
 }
 
 .rightside .headline h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 2rem;
   color: var(--color-text-heading);
 }
 
 .rightside .body p {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-gray700);
+  color: var(--color-gray900);
   margin-bottom: 0.5rem;
 }
 
@@ -1567,11 +1526,9 @@ footer .container {
 .rightside .body select {
   width: 100%;
   padding: 0.75rem;
-  margin-bottom: 1rem;
   border: 1px solid var(--color-gray300);
   border-radius: 8px;
   font-size: 1rem;
-  margin-bottom: 2rem;
 }
 
 .rightside button {
@@ -1584,13 +1541,16 @@ footer .container {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
   margin-top: 8rem;
   height: 3.3rem;
 }
 
 .rightside button:hover {
-  background-color: darken(var(--color-primary), 2%);
+  background-color:var(--color-primary);
+  text-decoration: none;
+  transform: scale(1.01);
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .input-container {
@@ -1598,16 +1558,144 @@ footer .container {
   width: 100%;
 }
 
-.input-container input {
-  width: 100%; 
-  padding-right: 2rem; 
+.hero2-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.input-container i {
+.nav-contact {
   position: absolute;
-  right: 1.5rem; 
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray800);
+  top: 30px;
+  left: 50%; 
+  transform: translateX(-50%);
+  margin-left: -23rem;
+}
+
+.input-error {
+  border-color: var(--color-error);
+}
+
+.error-text {
+  color: var(--color-error);
+  font-size: 0.8rem;
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.input-container select {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-gray300);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  color: var(--color-gray700);
+  appearance: none;
+  padding-right: 2rem;
+}
+
+.input-container select::-ms-expand {
+  display: none;
+}
+
+.input-container::after {
+  content: '';
+  position: absolute;
+  right: 1.5rem;
   top: 32%;
-  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border: solid var(--color-gray700);
+  border-width: 0 2px 2px 0;
+  transform: translateY(-50%) rotate(45deg);
   pointer-events: none;
-  color: #333; 
+}
+.form-input {
+  margin-bottom: 0.8rem;
+}
+
+.success-message {
+    background-color: #d4edda; 
+    color: #155724;      
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  
+}
+.Navigationcontact {
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+.flexall {
+  display: flex;
+  padding: .6rem;
+  gap: 10px;
+}
+.map {
+  margin-top: 5rem;
+}
+.medicalcenter {
+  padding-left: 8rem;
+  margin-top: 4rem;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-left: 12px;
+  }
+}
+.socialmedia {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  padding-top: 4rem;
+  gap: 1rem;
+  margin-left: 12px;
+}
+
+.days {
+  padding: 10px;
+  font-weight: 800;
+  color: black;
+}
+
+.days1 {
+  padding: 40px;
+  font-weight: 800;
+  color: black;
+}
+
+.secondrow {
+  margin-left: -35px;
+}
+.secondrow1 {
+  margin-left: -10px;
+}
+
+.timericonic {
+  margin-left: 10px;
+  padding-top: 7px;
+}
+
+.icons-options {
+  font-size: 16px;
+  color: var(--color-gray700);
+  font-weight: 400;
+
+}
+
+.medicalcenter2 {
+  margin-top: 4rem;
 }
